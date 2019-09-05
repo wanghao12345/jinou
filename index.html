@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>金隅集团一体化管控综合信息平台</title>
+    <title>xxxxxxxxx</title>
     <link rel="stylesheet" href="./static/css/reset.css">
     <link rel="stylesheet" href="./static/css/index.css">
-    <script src="./static/js/jquery.1.9.1.js"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./static/js/bootstrap/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
     <div class="wrapper-box">
@@ -45,12 +50,50 @@
         </div>
         <!--主要内容-->
         <div class="main-content-box">
+            <!--顶部内容-->
             <div class="main-top-box">
-
-
+                <div class="main-top-left">金隅集团一体化管控综合信息平台</div>
+                <div class="main-top-right">
+                    <ul class="nav nav-pills">
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="./static/img/icon-邮件灰色.png" alt="邮件">
+                                <i class="num">2</i>
+                            </a>
+                        </li>
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="./static/img/icon-消息.png" alt="消息">
+                                <i class="num">2</i>
+                            </a>
+                        </li>
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img class="person-icon" src="./static/img/person-icon.png" alt="人力资源">
+                                <span class="person-name">王大明</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu top-dropdown-menu-box">
+                                <li class="active">
+                                    <img class="person-icon" src="./static/img/icon-个人信息.png" alt="个人信息">
+                                    <span>个人信息</span>
+                                </li>
+                                <li>
+                                    <img class="person-icon" src="./static/img/icon-退出登录.png" alt="退出登录">
+                                    <span>退出登录</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <!--底部内容-->
+            <div class="main-bottom-box"></div>
         </div>
     </div>
 </body>
+<!--jquery-->
+<script src="./static/js/jquery.1.9.1.js"></script>
+<script src="./static/js/bootstrap/js/bootstrap.min.js"></script>
 <script src="./static/js/index.js"></script>
 </html>
