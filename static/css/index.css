@@ -196,12 +196,28 @@
     background:rgba(255,255,255,1);
     box-shadow:0px 2px 6px 0px rgba(96,38,38,0.06);
     border-radius:6px;
+    overflow: hidden;
 }
-.nav-sys-box .panel-default{
-    width: 100%;
+.nav-sys-box .nav-item{
+    width: 200px;
     height: 100%;
-    border: 0;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
 }
+.nav-sys-box .nav-item img{
+    margin-bottom: 10px;
+}
+.nav-sys-box .nav-item span{
+    display: block;
+    font-size:16px;
+    font-family:Helvetica;
+    color:rgba(62,62,62,1);
+    line-height:19px;
+}
+
+
 /*中间部分*/
 .main-middle-box{
     width: 100%;
