@@ -9,7 +9,7 @@ $(function () {
   $('.menu-item-box').on('click', function () {
     $('.menu-item-box').removeClass('active-menu-item-box')
     $(this).addClass('active-menu-item-box')
-  })
+  });
   /**
    * 右上下拉选择
    */
@@ -21,10 +21,20 @@ $(function () {
       $('.top-dropdown-menu-box').removeClass('dropdown-after-red')
     }
     $(this).addClass('active')
-  })
-
-
-
+  });
+  /**
+   * 新闻banner
+   */
+  new $.Tab({
+    target: $('#news_banner_img li'),
+    // effect: 'slide3d',
+    animateTime: 1000,
+    stay: 3500,
+    autoPlay: true,
+    merge: true,
+    prevBtn: $('#js_banner_pre'),
+    nextBtn: $('#js_banner_next')
+  });
 
 
 
