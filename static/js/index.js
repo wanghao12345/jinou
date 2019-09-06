@@ -13,7 +13,7 @@ $(function () {
   /**
    * 右上下拉选择
    */
-  $('.top-dropdown-menu-box li').on('mouseover', function () {
+ /* $('.top-dropdown-menu-box li').on('mouseover', function () {
     $('.top-dropdown-menu-box li').removeClass('active')
     if ($(this).data('index') === 1) {
       $('.top-dropdown-menu-box').addClass('dropdown-after-red')
@@ -21,7 +21,7 @@ $(function () {
       $('.top-dropdown-menu-box').removeClass('dropdown-after-red')
     }
     $(this).addClass('active')
-  });
+  });*/
   /**
    * 新闻banner
    */
