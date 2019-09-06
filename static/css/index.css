@@ -319,9 +319,15 @@
 }
 .jinou-article-list-box p span.title{
     float: left;
+    font-size:14px;
+    font-family:Helvetica;
+    color:rgba(101,101,101,1);
 }
 .jinou-article-list-box p span.time{
     float: right;
+    font-size:12px;
+    font-family:Helvetica;
+    color: rgb(175, 175, 175);
 }
 
 .comp-public-box{
