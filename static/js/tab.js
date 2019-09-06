@@ -138,6 +138,7 @@ jQuery.extend(jQuery.easing, {
     oninit: function () {
     },
     onchange: function () {
+
     }
   };
   Tab.prototype = {

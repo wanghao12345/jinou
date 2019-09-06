@@ -25,7 +25,7 @@ $(function () {
   /**
    * 新闻banner
    */
-  new $.Tab({
+  var bannerTab =  new $.Tab({
     target: $('#news_banner_img li'),
     // effect: 'slide3d',
     animateTime: 1000,
@@ -33,10 +33,15 @@ $(function () {
     autoPlay: true,
     merge: true,
     prevBtn: $('#js_banner_pre'),
-    nextBtn: $('#js_banner_next')
+    nextBtn: $('#js_banner_next'),
+    onchange: function (res) {
+      // console.log(res)
+
+      var text = $($('#banner-list-text p')[res]).find('span.title').text()
+      $('#banner-title-text').text(text)
+    }
   });
-
-
+  console.log(bannerTab);
 
 
 })
