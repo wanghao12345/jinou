@@ -35,10 +35,12 @@ $(function () {
     prevBtn: $('#js_banner_pre'),
     nextBtn: $('#js_banner_next'),
     onchange: function (res) {
-      // console.log(res)
-
+      // 设置轮播图标题
       var text = $($('#banner-list-text p')[res]).find('span.title').text()
       $('#banner-title-text').text(text)
+      // 把轮播图对应的标题变红
+      $('#banner-list-text p a').removeClass('active')
+      $($('#banner-list-text p')[res]).find('a').addClass('active')
     }
   });
   console.log(bannerTab);

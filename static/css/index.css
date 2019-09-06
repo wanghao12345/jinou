@@ -314,6 +314,9 @@
 .jinou-article-list-box p a{
     color: rgba(101,101,101,1);
 }
+.jinou-article-list-box p a.active{
+    color: #d7191b;
+}
 .jinou-article-list-box p span.title{
     float: left;
 }
