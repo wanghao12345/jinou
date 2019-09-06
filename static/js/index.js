@@ -25,7 +25,7 @@ $(function () {
   /**
    * 新闻banner
    */
-  var bannerTab =  new $.Tab({
+  new $.Tab({
     target: $('#news_banner_img li'),
     // effect: 'slide3d',
     animateTime: 1000,
@@ -43,7 +43,16 @@ $(function () {
       $($('#banner-list-text p')[res]).find('a').addClass('active')
     }
   });
-  console.log(bannerTab);
-
+  /**
+   * 通知公告部分
+   */
+  $('#comp-public-max-title h2').on('click', function () {
+    $('#comp-public-max-title h2').removeClass('active')
+    $(this).addClass('active')
+  })
+  $('#comp-public-min-title h2').on('click', function () {
+    $('#comp-public-min-title h2').removeClass('active')
+    $(this).addClass('active')
+  })
 
 })

@@ -329,6 +329,40 @@
     height: 300px;
     margin-top: 18px;
 }
+.comp-public-box .comp-public-max-title{
+    border-bottom: 1px solid #F1F2F6;
+    height: 55px;
+    line-height: 55px;
+}
+.comp-public-box .comp-public-max-title h2{
+    font-size:20px;
+    font-family:Helvetica;
+    color:rgba(101,101,101,1);
+    margin-right: 63px;
+    cursor: pointer;
+}
+.comp-public-box .comp-public-max-title h2.active{
+    color:rgba(207,0,15,1);
+}
+.comp-public-box .comp-public-min-title{
+    width: 100%;
+    height: 40px;
+}
+.comp-public-box .comp-public-min-title h2{
+    font-size: 16px;
+    font-family: Helvetica;
+    color: rgba(137,137,137,1);
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    margin-right: 80px;
+    cursor: pointer;
+}
+.comp-public-box .comp-public-min-title h2.active{
+    border-bottom: 3px solid #da2420;
+}
 .comp-rule-box{
     width: 100%;
     height: 260px;
@@ -356,8 +390,26 @@
 .comp-rule-box .news-paper-box{
     width: 100%;
     height: 100%;
+    position: relative;
 }
-
+.comp-rule-box .news-paper-box img{
+    width: 100%;
+    height: 100%;
+}
+.comp-rule-box .news-paper-box .news-paper-title-box{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:40px;
+    background:rgba(68,47,47,0.78);
+    opacity:0.8676;
+    font-size:18px;
+    font-family:Helvetica;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    line-height: 40px;
+}
 
 .main-right-middle{
     position: absolute;
@@ -426,6 +478,48 @@
 .person-intro-body{
     width: 100%;
     height: 85px;
+    line-height: 85px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.person-intro-body em{
+    display: block;
+    border-right: 2px dotted #8e8e8e;
+    width: 2px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 24px;
+}
+.person-intro-body .today-num{
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-size:18px;
+    font-family:PingFangSC;
+    font-weight:400;
+    color:rgba(101,101,101,1);
+    box-sizing: border-box;
+}
+.person-intro-body .today-num strong{
+    font-size:34px;
+    font-family:Helvetica;
+    color:rgba(218,32,31,1);
+}
+
+.person-intro-body .all-num{
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-size:18px;
+    font-family:Helvetica;
+    color:rgba(101,101,101,1);
+}
+.person-intro-body .all-num strong{
+    font-size:34px;
+    font-family:Helvetica;
+    color:rgba(255,147,79,1);
 }
 .common-func-box{
     width: 100%;
