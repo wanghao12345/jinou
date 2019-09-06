@@ -366,6 +366,56 @@
     width: 100%;
     height: 260px;
 }
+.person-intro-header{
+    width: 100%;
+    height: 175px;
+    background: url("../img/名片背景.png");
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding-top: 41px;
+    padding-left: 34px;
+}
+.person-intro-header .left-img{
+    width: 98px;
+    height: 98px;
+    border-radius: 98px;
+    background: #ffffff;
+    overflow: hidden;
+    float: left;
+}
+.person-intro-header .left-img img{
+    width: 100%;
+    height: 100%;
+}
+.person-intro-header .right-info{
+    float: left;
+    margin-left: 20px;
+    color: white;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+.person-intro-header .right-info .time{
+    line-height: 10px;
+}
+.person-intro-header .right-info .greet{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 40px;
+}
+.person-intro-header .right-info .skills{
+
+}
+.person-intro-header .right-info .skills span{
+    background: rgba(255,255,255, 0.2);
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.person-intro-body{
+    width: 100%;
+    height: 85px;
+}
 .common-func-box{
     width: 100%;
     height: 220px;
