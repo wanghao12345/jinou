@@ -537,6 +537,7 @@
 }
 .common-func-title-box span{
     float: right;
+    cursor: pointer;
 }
 .common-func-title-box span img {
 

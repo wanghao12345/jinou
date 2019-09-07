@@ -55,4 +55,23 @@ $(function () {
     $(this).addClass('active')
   })
 
+  /**
+   * 设置常用设置
+   */
+  // 打开
+  $('span#common-setting').on('click', function () {
+    $('#common-setting-dialog').css('display', 'block')
+  })
+
+  // 关闭
+  $('#common-setting-dialog').on('click', '.close-btn', function () {
+    $('#common-setting-dialog').css('display', 'none')
+  })
+  // 确定
+  $('#common-setting-dialog').on('click', '.query-btn', function () {
+    $('#common-setting-dialog').css('display', 'none')
+  })
+
+
+
 })

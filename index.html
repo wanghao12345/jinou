@@ -324,7 +324,7 @@
                     <div class="common-func-box box-shadow-panel">
                         <div class="jinou-title-box common-func-title-box">
                             <h2>常用功能</h2>
-                            <span>
+                            <span id="common-setting">
                                 <img src="./static/img/icon-设置.png" alt="设置">
                             </span>
                         </div>
@@ -368,11 +368,11 @@
 </div>
 
 <!--设置常用功能弹窗-->
-<div class="dialog-box">
+<div class="dialog-box" id="common-setting-dialog">
     <div class="dialog-content-box">
         <div class="dialog-header-box">
             <h2>设置常用功能</h2>
-            <span>
+            <span class="close-btn">
                 <img src="./static/img/关闭.png" alt="关闭">
             </span>
         </div>
@@ -424,46 +424,34 @@
                     <ul>
                         <li>
                             <span class="text">薪资查询</span>
-                            <span class="icon">
-                                <img src="./static/img/remove-icon.png" alt="减少">
-                            </span>
+                            <span class="icon add-icon">+</span>
                         </li>
                         <li>
                             <span class="text">通讯录</span>
-                            <span class="icon">
-                                <img src="./static/img/remove-icon.png" alt="减少">
-                            </span>
+                            <span class="icon add-icon">+</span>
                         </li>
                         <li>
                             <span class="text">个人履历</span>
-                            <span class="icon">
-                                <img src="./static/img/remove-icon.png" alt="减少">
-                            </span>
+                            <span class="icon add-icon">+</span>
                         </li>
                         <li>
                             <span class="text">请假申请</span>
-                            <span class="icon">
-                                <img src="./static/img/remove-icon.png" alt="减少">
-                            </span>
+                            <span class="icon add-icon">+</span>
                         </li>
                         <li>
                             <span class="text">报销申请</span>
-                            <span class="icon">
-                                <img src="./static/img/remove-icon.png" alt="减少">
-                            </span>
+                            <span class="icon add-icon">+</span>
                         </li>
                         <li>
                             <span class="text">会议室申请</span>
-                            <span class="icon">
-                                <img src="./static/img/remove-icon.png" alt="减少">
-                            </span>
+                            <span class="icon add-icon">+</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="dialog-btn-list">
-                <button class="cancer">取消</button>
-                <button class="query">确定</button>
+                <button class="cancer close-btn">取消</button>
+                <button class="query query-btn">确定</button>
             </div>
         </div>
 

@@ -6,6 +6,7 @@
     background: rgba(0,0,0,0.5);
     top: 0;
     left: 0;
+    display: none;
 }
 .dialog-content-box{
     width:417px;
@@ -83,6 +84,17 @@
     cursor: pointer;
     float: right;
     margin-right: 5px;
+}
+.list-content-box ul li span.add-icon{
+    width: 15px;
+    height: 15px;
+    background: rgba(255,147,79,1);
+    color: white;
+    line-height: 15px;
+    font-size: 17px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 9px;
 }
 .list-content-box ul li span.icon img{
     width: 22px;
