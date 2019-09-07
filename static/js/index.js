@@ -97,7 +97,7 @@ $(function () {
     elem: '#selectYear', //指定元素
     type: 'month',
     format: 'yyyy年MM月',
-    value: new Date().getFullYear() + '年' + (new Date().getMonth() + 1) + '月',
+    value: new Date().getFullYear() + '年' + ((new Date().getMonth() + 1) < 10 ? '0' + (new Date().getMonth() + 1) : (new Date().getMonth() + 1)) + '月',
     done: function(value, date){
       getMonthData(date.year, date.month)
     }
@@ -113,7 +113,17 @@ $(function () {
     if (marginLeft < maxLeft) {
       marginLeft = maxLeft
     }
+    var nthChild = (marginLeft / 70) * (-1)
+    $('ul#date-banner-list li').removeClass('active')
+    $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').addClass('active')
     $('ul#date-banner-list').css('margin-left', marginLeft + 'px')
+
+    var selectYear = $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').data('year')
+    var selectMonth = $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').data('month')
+    var selectDay = $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').data('day')
+
+    changeDateListContent(selectYear, selectMonth, selectDay)
+
   });
   // 右边移动
   $('#date-next-btn').on('click', function () {
@@ -121,7 +131,27 @@ $(function () {
     if (marginLeft > 0) {
       marginLeft = 0
     }
+    var nthChild = (marginLeft / 70) * (-1)
+    $('ul#date-banner-list li').removeClass('active')
+    $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').addClass('active')
     $('ul#date-banner-list').css('margin-left', marginLeft + 'px')
+
+    var selectYear = $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').data('year')
+    var selectMonth = $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').data('month')
+    var selectDay = $('ul#date-banner-list li.date-item-'+ (nthChild + 3) +'').data('day')
+
+    changeDateListContent(selectYear, selectMonth, selectDay)
+  });
+  // 选中
+  $('ul#date-banner-list').on('click', 'li', function () {
+    $('ul#date-banner-list li').removeClass('active')
+    $(this).addClass('active')
+
+    var selectYear = $(this).data('year')
+    var selectMonth = $(this).data('month')
+    var selectDay = $(this).data('day')
+
+    changeDateListContent(selectYear, selectMonth, selectDay)
   });
 
 })
@@ -136,17 +166,13 @@ function getMonthData(year, month) {
   $('ul#date-banner-list').css('margin-left', '0px')
   $('ul#date-banner-list').css('width', dayNum * 70 + 'px');
   for (var i = 0; i < dayNum; i++) {
-    var li = '<li class="'+ (i === 0 ? "active" : "") +'">\n' +
+    var li = '<li data-year="'+ year +'" data-month="'+ month +'" data-day="'+ (i + 1) +'" class="'+ (i === 2 ? "active" : "") +' date-item-'+ (i + 1) +'">\n' +
             '<div class="week">'+getWeek(year, month, i + 1)+'</div>\n' +
             '<div class="day">'+ (i + 1) +'</div>\n' +
             '<div class="month">'+changeMonthName(month)+'</div>\n' +
             '</li>';
     $('ul#date-banner-list').append(li)
   }
-  $('ul#date-banner-list').on('click', 'li', function () {
-    $('ul#date-banner-list li').removeClass('active')
-    $(this).addClass('active')
-  });
 }
 
 /**
@@ -235,4 +261,26 @@ function changeMonthName(month) {
       return '十二月';
       break;
   }
+}
+
+/**
+ * 改变日历记录内容
+ */
+function changeDateListContent(year, month, day) {
+  $('#date-list-content-box').html(' <p class="first">\n' +
+    '    <span class="left">研发部门会议</span>\n' +
+    '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
+    '</p>\n' +
+    '<p class="second">\n' +
+    '    <span class="left">人力资源部门周会</span>\n' +
+    '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
+    '</p>\n' +
+    '<p>\n' +
+    '    <span class="left">研发部门会议</span>\n' +
+    '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
+    '</p>\n' +
+    '<p>\n' +
+    '    <span class="left">人力资源部门周会</span>\n' +
+    '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
+    '</p>')
 }
