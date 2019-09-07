@@ -11,7 +11,7 @@
 }
 .dialog-content-box{
     width:424px;
-    background:#ffffff;
+    background:#ededed;
     border-radius:6px;
     position: absolute;
     left: 50%;
@@ -63,7 +63,7 @@
     overflow: hidden;
 }
 .list-content-box ul li{
-    width: 103px;
+    width: 100px;
     height: 34px;
     background: #ffffff;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.05);
@@ -125,6 +125,8 @@
     color: #ffffff;
     margin-left: 14px;
     outline: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#6FC180, endColorstr=#7ED08B);/*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=1, startColorstr=#6FC180, endColorstr=#7ED08B)";/*IE8+*/
 }
 
 .list-content-box input{
@@ -140,7 +142,7 @@
 }
 
 ul.dialog-link-ul-box li{
-    width: 165px;
+    width: 162px;
 }
 ul.dialog-link-ul-box li span.text{
     width: 130px;
