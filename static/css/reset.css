@@ -72,6 +72,7 @@ a{
 html, body{
     width: 100%;
     min-width: 1500px;
+    min-height: 660px;
     height: 100%;
     overflow: auto;
     font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", "微软雅黑", sans-serif;

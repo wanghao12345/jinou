@@ -347,7 +347,7 @@
             <div class="main-bottom-box box-shadow-panel" style="padding-top: 0">
                 <div class="jinou-title-box common-func-title-box">
                     <h2>常用外部链接</h2>
-                    <span>
+                    <span id="common-link">
                         <img src="./static/img/icon-设置.png" alt="设置">
                     </span>
                 </div>
@@ -378,7 +378,7 @@
         </div>
         <div class="dialog-body-box">
             <div class="dialog-main-content-box">
-                <div class="list-title-box" style="margin-top: 5px">我的常用功能</div>
+                <div class="list-title-box" style="margin-top: 15px">我的常用功能</div>
                 <div class="list-content-box">
                     <ul>
                         <li>
@@ -419,7 +419,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="list-title-box" style="margin-top: -25px;">常用功能列表</div>
+                <div class="list-title-box">常用功能列表</div>
                 <div class="list-content-box">
                     <ul>
                         <li>
@@ -458,6 +458,106 @@
     </div>
 </div>
 
+<!--设置常用链接弹窗-->
+<div class="dialog-box" id="common-link-dialog">
+    <div class="dialog-content-box">
+        <div class="dialog-header-box">
+            <h2>设置常用链接</h2>
+            <span class="close-btn">
+                <img src="./static/img/关闭.png" alt="关闭">
+            </span>
+        </div>
+        <div class="dialog-body-box">
+            <div class="dialog-main-content-box">
+                <div class="list-title-box" style="margin-top: 15px">我的常用链接</div>
+                <div class="list-content-box">
+                    <ul class="dialog-link-ul-box">
+                        <li>
+                            <span class="text">北京市发改委</span>
+                            <span class="icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">北京市应急管理局</span>
+                            <span class="icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">北京市人力资源与社保局</span>
+                            <span class="icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">北京市审计局</span>
+                            <span class="icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">北京市国资委</span>
+                            <span class="icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">北京市生态环境局</span>
+                            <span class="icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-title-box">常用链接</div>
+                <div class="list-content-box">
+                    <ul class="dialog-link-ul-box">
+                        <li>
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-title-box">自定义链接</div>
+                <div class="list-content-box" style="height: 80px">
+                    <div class="name-box">
+                        <input type="text" placeholder="网站名称">
+                    </div>
+                    <div class="link-box">
+                        <input type="text" placeholder="http://">
+                        <button>添加链接</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-btn-list" style="margin-top: 20px">
+                <button class="cancer close-btn">取消</button>
+                <button class="query query-btn">确定</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 </body>
 <!--jquery-->

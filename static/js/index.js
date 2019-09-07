@@ -56,7 +56,7 @@ $(function () {
   })
 
   /**
-   * 设置常用设置
+   * 设置常用功能
    */
   // 打开
   $('span#common-setting').on('click', function () {
@@ -71,6 +71,24 @@ $(function () {
   $('#common-setting-dialog').on('click', '.query-btn', function () {
     $('#common-setting-dialog').css('display', 'none')
   })
+
+  /**
+   * 设置常用链接
+   */
+  // 打开
+  $('span#common-link').on('click', function () {
+    $('#common-link-dialog').css('display', 'block')
+  })
+
+  // 关闭
+  $('#common-link-dialog').on('click', '.close-btn', function () {
+    $('#common-link-dialog').css('display', 'none')
+  })
+  // 确定
+  $('#common-link-dialog').on('click', '.query-btn', function () {
+    $('#common-link-dialog').css('display', 'none')
+  })
+
 
 
 
