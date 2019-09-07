@@ -1,7 +1,7 @@
 .dialog-box{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     background: rgba(0,0,0,0.5);
     top: 0;
@@ -14,15 +14,106 @@
     position: absolute;
     left: 50%;
     margin-left: -208px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 .dialog-header-box{
     width: 100%;
     height: 50px;
     background:rgba(255,255,255,1);
     border-radius:6px 6px 0px 0px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 30px;
 }
+.dialog-header-box h2{
+    font-size:16px;
+    font-family:Helvetica;
+    color:rgba(62,62,62,1);
+    float: left;
+}
+.dialog-header-box span{
+    float: right;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.dialog-header-box span img{
+    width: 12px;
+    height: 12px;
+}
+
 .dialog-body-box{
     box-sizing: border-box;
-    padding: 0 10px 40px 10px;
+    padding: 0 20px 40px 20px;
+    font-size:14px;
+    font-family:Helvetica;
+    color:rgba(101,101,101,1);
+}
+.dialog-main-content-box{
+    width: 100%;
+}
+.list-content-box{
+    width: 100%;
+}
+.list-content-box ul{
+    width: 100%;
+    overflow: hidden;
+}
+.list-content-box ul li{
+    width: 105px;
+    height: 34px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    float: left;
+    margin: 0 10px 20px 10px;
+    text-align: center;
+    line-height: 34px;
+}
+.list-content-box ul li span.text{
+    font-size: 14px;
+    font-family: Helvetica;
+    color: rgba(101,101,101,1);
+    width: 70px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.list-content-box ul li span.icon{
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+}
+.list-content-box ul li span.icon img{
+    width: 22px;
+    height: 22px;
+}
+
+
+.list-title-box{
+    box-sizing: border-box;
+    padding: 10px;
+}
+.dialog-btn-list{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+.dialog-btn-list button{
+    width: 170px;
+    height: 40px;
+    font-size:16px;
+    font-family:Helvetica;
+    border-radius:4px;
+    border: 0;
+}
+.dialog-btn-list button.cancer{
+    color:rgba(101,101,101,1);
+    background:rgba(214,214,214,1);
+    margin-right: 10px;
+}
+.dialog-btn-list button.query{
+    color:rgba(255,255,255,1);
+    background:linear-gradient(241deg,rgba(255,171,100,1) 0%,rgba(255,82,52,1) 100%);
 }
