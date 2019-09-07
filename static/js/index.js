@@ -89,6 +89,14 @@ $(function () {
     $('#common-link-dialog').css('display', 'none')
   })
 
+  /**
+   * 选择年月
+   */
+  laydate.render({
+    elem: '#selectYear', //指定元素
+    type: 'month',
+    format: 'yyyy年MM月'
+  });
 
 
 

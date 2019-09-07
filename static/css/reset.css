@@ -104,3 +104,6 @@ html{
 .dn{
     display: none;
 }
+button,input{
+    outline: none;
+}
