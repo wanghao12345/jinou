@@ -13,6 +13,9 @@
     left: 0;
     background:linear-gradient(131deg,rgba(216,1,0,1) 0%,rgba(255,147,79,1) 100%);
     box-shadow:0px 2px 6px 0px rgba(47,25,25,0.04);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d90603, endColorstr=#fd8a4a);/*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#d90603, endColorstr=#fd8a4a)";/*IE8+*/
 }
 .logo-box{
     width: 100%;
@@ -54,7 +57,7 @@
 .menu-item-box .name-text{
     font-size: 14px;
     font-family: Helvetica;
-    color: rgba(255,255,255,1);
+    color: #ffffff;
     line-height: 17px;
     text-align: center;
     margin-top: 4px;
@@ -106,7 +109,7 @@
     width:25px;
     height:25px;
     background:rgba(210,8,19,1);
-    border:2px solid rgba(255,255,255,1);
+    border:2px solid #ffffff;
     border-radius: 25px;
     color: white;
     font-size: 15px;
@@ -186,7 +189,7 @@
     height: 120px;
 }
 .box-shadow-panel{
-    background:rgba(255,255,255,1);
+    background:#ffffff;
     box-shadow:0px 2px 6px 0px rgba(96,38,38,0.06);
     border-radius:6px;
     overflow: hidden;
@@ -256,7 +259,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    color:rgba(255,255,255,1);
+    color:#ffffff;
     text-align: center;
     line-height: 50px;
     font-size:17px;
@@ -405,7 +408,7 @@
     opacity:0.8676;
     font-size:18px;
     font-family:Helvetica;
-    color:rgba(255,255,255,1);
+    color:#ffffff;
     text-align: center;
     line-height: 40px;
 }
@@ -546,7 +549,7 @@
     display: inline-block;
     width:112px;
     height:34px;
-    background:rgba(255,255,255,1);
+    background:#ffffff;
     box-shadow:0px 2px 8px 0px rgba(106,32,31,0.16);
     border-radius:4px;
     margin: 10px;
@@ -581,7 +584,7 @@
     display: inline-block;
     width:190px;
     height:34px;
-    background:rgba(255,255,255,1);
+    background:#ffffff;
     box-shadow:0px 2px 8px 0px rgba(106,32,31,0.16);
     border-radius:4px;
     margin: 10px;

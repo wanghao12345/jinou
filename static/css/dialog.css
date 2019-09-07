@@ -7,10 +7,11 @@
     top: 0;
     left: 0;
     display: none;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000)
 }
 .dialog-content-box{
     width:424px;
-    background:rgba(245,245,245,1);
+    background:#ffffff;
     border-radius:6px;
     position: absolute;
     left: 50%;
@@ -20,7 +21,7 @@
 .dialog-header-box{
     width: 100%;
     height: 50px;
-    background:rgba(255,255,255,1);
+    background:#ffffff;
     border-radius:6px 6px 0px 0px;
     overflow: hidden;
     box-sizing: border-box;
@@ -64,7 +65,7 @@
 .list-content-box ul li{
     width: 103px;
     height: 34px;
-    background: rgba(255,255,255,1);
+    background: #ffffff;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.05);
     border-radius: 4px;
     float: left;
@@ -91,13 +92,14 @@
 .list-content-box ul li span.add-icon{
     width: 15px;
     height: 15px;
-    background: rgba(255,147,79,1);
+    background: #ff934f;
     color: white;
     line-height: 15px;
     font-size: 17px;
     border-radius: 10px;
     text-align: center;
     margin-top: 9px;
+    behavior: url(PIE.htc);
 }
 .list-content-box ul li span.icon img{
     width: 22px;
@@ -120,7 +122,7 @@
     border: 0;
     font-size: 12px;
     font-family: Helvetica;
-    color: rgba(255,255,255,1);
+    color: #ffffff;
     margin-left: 14px;
     outline: none;
 }
@@ -128,7 +130,7 @@
 .list-content-box input{
     width:240px;
     height:30px;
-    background:rgba(255,255,255,1);
+    background:#ffffff;
     border-radius:4px;
     border: 0;
     box-sizing: border-box;
@@ -168,6 +170,9 @@ ul.dialog-link-ul-box li span.text{
     margin-right: 10px;
 }
 .dialog-btn-list button.query{
-    color:rgba(255,255,255,1);
+    color:#ffffff;
     background:linear-gradient(241deg,rgba(255,171,100,1) 0%,rgba(255,82,52,1) 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#d90603, endColorstr=#fd8a4a);/*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=1, startColorstr=#d90603, endColorstr=#fd8a4a)";/*IE8+*/
 }
