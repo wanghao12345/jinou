@@ -331,7 +331,7 @@
                                 <img src="./static/img/icon-设置.png" alt="设置">
                             </span>
                         </div>
-                        <div class="func-list-box">
+                        <div class="func-list-box" id="common-func-list">
                             <span>薪资查询</span>
                             <span>通讯录</span>
                             <span>个人简历</span>
@@ -385,15 +385,15 @@
                         <img src="./static/img/icon-设置.png" alt="设置">
                     </span>
                 </div>
-                <div class="common-link-box">
-                    <span>北京市发改委</span>
-                    <span>北京市应急管理局</span>
-                    <span>北京市人力资源与社保局</span>
-                    <span>北京市审计局</span>
-                    <span>北京市国资委</span>
-                    <span>北京市生态环境局</span>
-                    <span>北京市财政局</span>
-                    <span>北京市市场监督管理局</span>
+                <div class="common-link-box" id="common-outer-link">
+                    <span><a href="http://www.baidu.com" target="_blank">北京市发改委</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市应急管理局</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市人力资源与社保局</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市审计局</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市国资委</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市生态环境局</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市财政局</a></span>
+                    <span><a href="http://www.baidu.com" target="_blank">北京市市场监督管理局</a></span>
                 </div>
             </div>
 
@@ -414,40 +414,40 @@
             <div class="dialog-main-content-box">
                 <div class="list-title-box" style="margin-top: 15px">我的常用功能</div>
                 <div class="list-content-box">
-                    <ul>
+                    <ul id="my-common-setting">
                         <li>
                             <span class="text">薪资查询</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
                         <li>
                             <span class="text">通讯录</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
                         <li>
                             <span class="text">个人履历</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
                         <li>
                             <span class="text">请假申请</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
                         <li>
                             <span class="text">报销申请</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
                         <li>
                             <span class="text">会议室申请</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
@@ -455,29 +455,29 @@
                 </div>
                 <div class="list-title-box">常用功能列表</div>
                 <div class="list-content-box">
-                    <ul>
+                    <ul id="common-setting-list">
                         <li>
-                            <span class="text">薪资查询</span>
+                            <span class="text">常用功能</span>
                             <span class="icon add-icon">+</span>
                         </li>
                         <li>
-                            <span class="text">通讯录</span>
+                            <span class="text">常用功能</span>
                             <span class="icon add-icon">+</span>
                         </li>
                         <li>
-                            <span class="text">个人履历</span>
+                            <span class="text">常用功能</span>
                             <span class="icon add-icon">+</span>
                         </li>
                         <li>
-                            <span class="text">请假申请</span>
+                            <span class="text">常用功能</span>
                             <span class="icon add-icon">+</span>
                         </li>
                         <li>
-                            <span class="text">报销申请</span>
+                            <span class="text">常用功能</span>
                             <span class="icon add-icon">+</span>
                         </li>
                         <li>
-                            <span class="text">会议室申请</span>
+                            <span class="text">常用功能</span>
                             <span class="icon add-icon">+</span>
                         </li>
                     </ul>
@@ -505,40 +505,40 @@
             <div class="dialog-main-content-box">
                 <div class="list-title-box" style="margin-top: 15px">我的常用链接</div>
                 <div class="list-content-box">
-                    <ul class="dialog-link-ul-box">
-                        <li>
+                    <ul class="dialog-link-ul-box" id="my-common-link">
+                        <li data-link="http://www.baidu.com">
                             <span class="text">北京市发改委</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">北京市应急管理局</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">北京市人力资源与社保局</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">北京市审计局</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">北京市国资委</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">北京市生态环境局</span>
-                            <span class="icon">
+                            <span class="icon remove-icon">
                                 <img src="./static/img/remove-icon.png" alt="减少">
                             </span>
                         </li>
@@ -546,41 +546,41 @@
                 </div>
                 <div class="list-title-box">常用链接</div>
                 <div class="list-content-box">
-                    <ul class="dialog-link-ul-box">
-                        <li>
+                    <ul class="dialog-link-ul-box" id="common-link-list">
+                        <li data-link="http://www.baidu.com">
                             <span class="text">其他常用链接</span>
                             <span class="icon add-icon">+</span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">其他常用链接</span>
                             <span class="icon add-icon">+</span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">其他常用链接</span>
                             <span class="icon add-icon">+</span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">其他常用链接</span>
                             <span class="icon add-icon">+</span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">其他常用链接</span>
                             <span class="icon add-icon">+</span>
                         </li>
-                        <li>
+                        <li data-link="http://www.baidu.com">
                             <span class="text">其他常用链接</span>
                             <span class="icon add-icon">+</span>
                         </li>
                     </ul>
                 </div>
                 <div class="list-title-box">自定义链接</div>
-                <div class="list-content-box" style="height: 80px">
+                <div class="list-content-box" id="add-link-box" style="height: 80px">
                     <div class="name-box">
-                        <input type="text" placeholder="网站名称">
+                        <input type="text" class="link-name" placeholder="网站名称">
                     </div>
                     <div class="link-box">
-                        <input type="text" placeholder="http://">
-                        <button>添加链接</button>
+                        <input type="text" class="link-value" placeholder="http://">
+                        <button class="add-btn">添加链接</button>
                     </div>
                 </div>
             </div>

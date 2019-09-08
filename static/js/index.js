@@ -62,17 +62,44 @@ $(function () {
   // 打开
   $('span#common-setting').on('click', function () {
     $('#common-setting-dialog').css('display', 'block')
-  })
+  });
 
   // 关闭
   $('#common-setting-dialog').on('click', '.close-btn', function () {
     $('#common-setting-dialog').css('display', 'none')
-  })
+  });
   // 确定
   $('#common-setting-dialog').on('click', '.query-btn', function () {
+    $('#common-func-list').html('');
+    $('#my-common-setting li').each(function (index, item) {
+      var text = $(item).find('span.text').text()
+      $('#common-func-list').append('<span>'+ text +'</span>')
+    })
     $('#common-setting-dialog').css('display', 'none')
-  })
+  });
+  // 添加到我的常用功能
+  $('#common-setting-list').on('click', 'span.add-icon', function () {
+    var li = $(this).parents('li')
+    var text = li.find('span.text').text()
+    $('#my-common-setting').append('<li>\n' +
+      '                            <span class="text">'+ text +'</span>\n' +
+      '                            <span class="icon remove-icon">\n' +
+      '                                <img src="./static/img/remove-icon.png" alt="减少">\n' +
+      '                            </span>\n' +
+      '                        </li>')
+    li.remove()
+  });
 
+  // 减少我的常用功能
+  $('#my-common-setting').on('click', 'span.remove-icon', function () {
+    var li = $(this).parents('li')
+    var text = li.find('span.text').text()
+    $('#common-setting-list').append('<li>\n' +
+      '                            <span class="text">'+ text +'</span>\n' +
+      '                            <span class="icon add-icon">+</span>\n' +
+      '                        </li>')
+    li.remove()
+  });
   /**
    * 设置常用链接
    */
@@ -87,8 +114,50 @@ $(function () {
   })
   // 确定
   $('#common-link-dialog').on('click', '.query-btn', function () {
+    $('#common-outer-link').html('');
+    $('#my-common-link li').each(function (index, item) {
+      var text = $(item).find('span.text').text()
+      var link = $(item).data('link')
+      $('#common-outer-link').append('<span><a href="'+ link +'" target="_blank">'+ text +'</a></span>')
+    })
     $('#common-link-dialog').css('display', 'none')
   })
+
+  // 添加到我的常用链接
+  $('#common-link-list').on('click', 'span.add-icon', function () {
+    var li = $(this).parents('li')
+    var text = li.find('span.text').text()
+    var link = li.data('link')
+    $('#my-common-link').append('<li data-link="'+ link +'">\n' +
+      '                            <span class="text">'+ text +'</span>\n' +
+      '                            <span class="icon remove-icon">\n' +
+      '                                <img src="./static/img/remove-icon.png" alt="减少">\n' +
+      '                            </span>\n' +
+      '                        </li>')
+    li.remove()
+  });
+
+  // 减少我的常用链接
+  $('#my-common-link').on('click', 'span.remove-icon', function () {
+    var li = $(this).parents('li')
+    var text = li.find('span.text').text()
+    $('#common-link-list').append('<li>\n' +
+      '                            <span class="text">'+ text +'</span>\n' +
+      '                            <span class="icon add-icon">+</span>\n' +
+      '                        </li>')
+    li.remove()
+  });
+
+  // 添加自定义链接
+  $('#add-link-box').on('click', 'button.add-btn', function () {
+    var name = $('#add-link-box input.link-name').val()
+    var value = $('#add-link-box input.link-value').val()
+    $('#common-link-list').append('<li data-link="'+ value +'">\n' +
+      '                            <span class="text">'+ name +'</span>\n' +
+      '                            <span class="icon add-icon">+</span>\n' +
+      '                        </li>')
+  })
+
 
   /**
    * 选择年月
