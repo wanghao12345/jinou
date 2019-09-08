@@ -11,6 +11,18 @@ $(function () {
     $('.menu-item-box').removeClass('active-menu-item-box')
     $(this).addClass('active-menu-item-box')
   });
+
+  /**
+   * 查看系统更多
+   */
+  $('#search-more-sys-btn').on('click', function () {
+    $('.nav-sys-content-box').html('<div class="nav-item">\n' +
+      '                        <a href="/">\n' +
+      '                            <img src="./static/img/icon-oa系统.png" alt="oa系统">\n' +
+      '                            <span>更多系统</span>\n' +
+      '                        </a>\n' +
+      '                    </div>')
+  });
   /**
    * 右上下拉选择
    */
