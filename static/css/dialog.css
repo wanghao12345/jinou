@@ -16,7 +16,8 @@
     position: absolute;
     left: 50%;
     margin-left: -208px;
-    margin-top: 50px;
+    top: 50%;
+    margin-top: -222.5px;
 }
 .dialog-header-box{
     width: 100%;
@@ -45,7 +46,7 @@
 
 .dialog-body-box{
     box-sizing: border-box;
-    padding: 0 20px 40px 20px;
+    padding: 0 20px 20px 20px;
     font-size:14px;
     font-family:Helvetica;
     color:rgba(101,101,101,1);
