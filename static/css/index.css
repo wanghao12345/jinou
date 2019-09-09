@@ -329,6 +329,9 @@
 .jinou-article-list-box p a.active{
     color: #d7191b;
 }
+.jinou-article-list-box p a.active span{
+    color: #d7191b;
+}
 .jinou-article-list-box p span.title{
     float: left;
     font-size:14px;
@@ -563,7 +566,7 @@
 }
 .func-list-box span{
     display: inline-block;
-    width:112px;
+    width:111px;
     height:34px;
     background:#ffffff;
     box-shadow:0px 2px 8px 0px rgba(106,32,31,0.16);
