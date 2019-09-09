@@ -3,15 +3,6 @@
  */
 var dayNum = 30
 $(function () {
-
-  /**
-   * 菜单切换
-   */
-  $('.menu-item-box').on('click', function () {
-    $('.menu-item-box').removeClass('active-menu-item-box')
-    $(this).addClass('active-menu-item-box')
-  });
-
   /**
    * 查看系统更多
    */

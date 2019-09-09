@@ -1,0 +1,41 @@
+<!--logo-->
+<div class="logo-box">
+    <img src="./static/img/金隅集团logo白色.png" alt="logo">
+</div>
+<!--菜单列表-->
+<div class="menu-list-box">
+        <div class="menu-item-box active-menu-item-box">
+            <div class="icon-box">
+                <img src="./static/img/icon-home.png" alt="home">
+            </div>
+            <div class="name-text">首页</div>
+        </div>
+        <div class="menu-item-box">
+            <div class="icon-box">
+                <img style="width: 30px;" src="./static/img/icon-待办.png" alt="待办">
+            </div>
+            <div class="name-text">待办</div>
+        </div>
+        <div class="menu-item-box">
+            <div class="icon-box">
+                <img style="width: 30px;" src="./static/img/icon-金隅报.png" alt="金隅报">
+            </div>
+            <div class="name-text">金隅报</div>
+        </div>
+        <div class="menu-item-box">
+            <div class="icon-box">
+                <img style="width: 30px;" src="./static/img/icon-更多.png" alt="更多">
+            </div>
+            <div class="name-text">更多</div>
+        </div>
+    </div>
+
+<script>
+    /**
+     * 菜单切换
+     */
+    $('.menu-item-box').on('click', function () {
+        $('.menu-item-box').removeClass('active-menu-item-box')
+        $(this).addClass('active-menu-item-box')
+    });
+</script>

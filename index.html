@@ -19,83 +19,11 @@
 <body>
 <div class="wrapper-box">
     <!--侧边栏菜单-->
-    <div class="nav-bar-box">
-        <!--logo-->
-        <div class="logo-box">
-            <img src="./static/img/金隅集团logo白色.png" alt="logo">
-        </div>
-        <!--菜单列表-->
-        <div class="menu-list-box">
-            <div class="menu-item-box active-menu-item-box">
-                <div class="icon-box">
-                    <img src="./static/img/icon-home.png" alt="home">
-                </div>
-                <div class="name-text">首页</div>
-            </div>
-            <div class="menu-item-box">
-                <div class="icon-box">
-                    <img style="width: 30px;" src="./static/img/icon-待办.png" alt="待办">
-                </div>
-                <div class="name-text">待办</div>
-            </div>
-            <div class="menu-item-box">
-                <div class="icon-box">
-                    <img style="width: 30px;" src="./static/img/icon-金隅报.png" alt="金隅报">
-                </div>
-                <div class="name-text">金隅报</div>
-            </div>
-            <div class="menu-item-box">
-                <div class="icon-box">
-                    <img style="width: 30px;" src="./static/img/icon-更多.png" alt="更多">
-                </div>
-                <div class="name-text">更多</div>
-            </div>
-        </div>
-    </div>
+    <div class="nav-bar-box"></div>
     <!--主要内容-->
     <div class="main-content-box">
         <!--顶部内容-->
-        <div class="main-top-box">
-            <div class="main-top-left">
-                <img src="./static/img/金隅集团一体化管控综合信息平台.png" alt="金隅集团一体化管控综合信息平台">
-            </div>
-            <div class="main-top-right">
-                <ul class="nav nav-pills">
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            <img src="./static/img/icon-邮件灰色.png" alt="邮件">
-                            <i class="num">2</i>
-                        </a>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            <img src="./static/img/icon-消息.png" alt="消息">
-                            <i class="num">2</i>
-                        </a>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                           aria-expanded="false">
-                            <img class="person-icon" src="./static/img/person-icon.png" alt="人力资源">
-                            <span class="person-name">王大明</span>
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu top-dropdown-menu-box dropdown-after-red">
-                            <li class="active" data-index="1">
-                                <img class="person-icon" src="./static/img/icon-个人信息.png" alt="个人信息">
-                                <span>个人信息</span>
-                            </li>
-                            <li data-index="2">
-                                <img class="person-icon" src="./static/img/icon-退出登录.png" alt="退出登录">
-                                <span>退出登录</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="main-top-box"></div>
         <!--底部内容-->
         <div class="main-bottom-box">
             <!--各大系统入口-->
@@ -636,4 +564,8 @@
 <script src="./static/js/tab.js"></script>
 <script src="./static/js/laydate/laydate.js"></script>
 <script src="./static/js/index.js"></script>
+<script>
+    $('.nav-bar-box').load('./components/menu.html')
+    $('.main-top-box').load('./components/top.html')
+</script>
 </html>
