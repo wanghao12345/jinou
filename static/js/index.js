@@ -16,25 +16,15 @@ $(function () {
    * 查看系统更多
    */
   $('#search-more-sys-btn').on('click', function () {
-    $('.nav-sys-content-box').html('<div class="nav-item">\n' +
-      '                        <a href="/">\n' +
-      '                            <img src="./static/img/icon-oa系统.png" alt="oa系统">\n' +
-      '                            <span>更多系统</span>\n' +
-      '                        </a>\n' +
-      '                    </div>')
-  });
-  /**
-   * 右上下拉选择
-   */
- /* $('.top-dropdown-menu-box li').on('mouseover', function () {
-    $('.top-dropdown-menu-box li').removeClass('active')
-    if ($(this).data('index') === 1) {
-      $('.top-dropdown-menu-box').addClass('dropdown-after-red')
-    } else {
-      $('.top-dropdown-menu-box').removeClass('dropdown-after-red')
+    var navSys = $('#nav-sys-list-box')
+    var wid = parseInt(navSys.css('width').split('p')[0])
+    var marginLeft = parseInt(navSys.css('margin-left').split('p')[0]) - 1200
+
+    if ((marginLeft *(-1)) >= wid) {
+      marginLeft = 0
     }
-    $(this).addClass('active')
-  });*/
+    $('#nav-sys-list-box').css('margin-left', marginLeft + 'px')
+  });
   /**
    * 新闻banner
    */

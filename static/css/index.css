@@ -194,6 +194,17 @@
     width: 1200px;
     height: 100%;
     float: left;
+    overflow: hidden;
+}
+.nav-sys-box .nav-sys-content-box .nav-sys-list-box{
+    width: 2400px;
+    height: 100%;
+    overflow: hidden;
+}
+.nav-sys-box .nav-sys-content-box .nav-item-list{
+    width: 1200px;
+    height: 100%;
+    float: left;
 }
 .nav-sys-box .more-sys-box{
     width: 50px;
