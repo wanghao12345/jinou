@@ -40,7 +40,11 @@ $(function () {
 })
 
 
-//初始化环形进度条
+/**
+ * 初始化环形进度条
+ * @param num
+ * @param val_num
+ */
 function create_circle(num, val_num){
     $('#circle_step' + num).circleProgress({
         value: val_num,
