@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>金隅集团一体化管控综合信息平台</title>
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/common.css">
+    <link rel="stylesheet" href="./static/css/dealt.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="./static/js/bootstrap/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>-->
+    <!--<script src="./static/js/PIE/PIE.js"></script>-->
+    <!--<![endif]-->
+</head>
+<body>
+<div class="wrapper-box">
+    <!--侧边栏菜单-->
+    <div class="nav-bar-box"></div>
+    <!--主要内容-->
+    <div class="main-content-box">
+        <!--顶部内容-->
+        <div class="main-top-box"></div>
+        <!--底部内容-->
+        <div class="main-bottom-box" >
+
+        </div>
+    </div>
+</div>
+
+<!--设置常用功能弹窗-->
+<div class="dialog-box" id="common-setting-dialog">
+    <div class="dialog-content-box">
+        <div class="dialog-header-box">
+            <h2>设置常用功能</h2>
+            <span class="close-btn">
+                <img src="./static/img/关闭.png" alt="关闭">
+            </span>
+        </div>
+        <div class="dialog-body-box">
+            <div class="dialog-main-content-box">
+                <div class="list-title-box" style="margin-top: 15px">我的常用功能</div>
+                <div class="list-content-box">
+                    <ul id="my-common-setting">
+                        <li>
+                            <span class="text">薪资查询</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">通讯录</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">个人履历</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">请假申请</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">报销申请</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">会议室申请</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-title-box">常用功能列表</div>
+                <div class="list-content-box">
+                    <ul id="common-setting-list">
+                        <li>
+                            <span class="text">常用功能</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">常用功能</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">常用功能</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">常用功能</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">常用功能</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li>
+                            <span class="text">常用功能</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dialog-btn-list">
+                <button class="cancer close-btn">取消</button>
+                <button class="query query-btn">确定</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--设置常用链接弹窗-->
+<div class="dialog-box" id="common-link-dialog">
+    <div class="dialog-content-box" style="margin-top: -267.5px">
+        <div class="dialog-header-box">
+            <h2>设置常用链接</h2>
+            <span class="close-btn">
+                <img src="./static/img/关闭.png" alt="关闭">
+            </span>
+        </div>
+        <div class="dialog-body-box">
+            <div class="dialog-main-content-box">
+                <div class="list-title-box" style="margin-top: 5px">我的常用链接</div>
+                <div class="list-content-box">
+                    <ul class="dialog-link-ul-box" id="my-common-link">
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">北京市发改委</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">北京市应急管理局</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">北京市人力资源与社保局</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">北京市审计局</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">北京市国资委</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">北京市生态环境局</span>
+                            <span class="icon remove-icon">
+                                <img src="./static/img/remove-icon.png" alt="减少">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-title-box">常用链接</div>
+                <div class="list-content-box">
+                    <ul class="dialog-link-ul-box" id="common-link-list">
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                        <li data-link="http://www.baidu.com">
+                            <span class="text">其他常用链接</span>
+                            <span class="icon add-icon">+</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-title-box">自定义链接</div>
+                <div class="list-content-box" id="add-link-box" style="height: 80px">
+                    <div class="name-box">
+                        <input type="text" class="link-name" placeholder="网站名称">
+                    </div>
+                    <div class="link-box">
+                        <input type="text" class="link-value" placeholder="http://">
+                        <button class="add-btn">添加链接</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog-btn-list" style="margin-top: 20px">
+                <button class="cancer close-btn">取消</button>
+                <button class="query query-btn">确定</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+<!--jquery-->
+<script src="./static/js/jquery.1.9.1.js"></script>
+<script src="./static/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="./static/js/tab.js"></script>
+<script src="./static/js/laydate/laydate.js"></script>
+<script src="./static/js/index.js"></script>
+<script>
+    $('.nav-bar-box').load('./components/menu.html')
+    $('.main-top-box').load('./components/top.html')
+</script>
+</html>
