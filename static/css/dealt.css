@@ -87,9 +87,29 @@ h2{
     float: left;
     box-sizing: border-box;
     padding: 9px;
+    position: relative;
 }
-.banner-content-box ul li{
-
+.banner-content-box ul li .right div{
+    width: 60px;
+    height: 60px;
+}
+.banner-content-box ul li .right div.val-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    text-align: center;
+    line-height: 60px;
+    font-size:10px;
+    font-family:Helvetica;
+    color:#BFBFBF;
+}
+.banner-content-box ul li .right div.val-box strong{
+    font-size:20px;
+    font-family:Helvetica;
+    color:#FF934F;
+    font-weight: bold;
 }
 
 
