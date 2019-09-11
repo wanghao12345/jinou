@@ -213,6 +213,10 @@ h2{
     color: #4E4E4E;
     line-height: 40px;
     font-weight: bold;
+    position: relative;
+}
+.table-list-box thead tr th span{
+    cursor: pointer;
 }
 .table-list-box thead tr th img{
     margin-left: 5px;

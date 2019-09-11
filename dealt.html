@@ -162,7 +162,7 @@
                 </div>
                 <div class="table-content-box">
                     <div class="table-select-box">
-                        <div class="select-left-box">
+                        <div class="select-left-box" id="sign-btn">
                             <span>标记为</span>
                             <img src="./static/img/dealt/标记为.png" alt="标记为">
                         </div>
@@ -184,17 +184,96 @@
                                 </div>
                             </div>
                         </div>
+                        <!--标记提示框-->
+                        <div class="tooltip-box sign-tooltip" id="sign-tip-box">
+                            <ul>
+                                <li>
+                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                    置顶
+                                </li>
+                                <li>
+                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                    取消置顶
+                                </li>
+                                <li>
+                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                    收藏
+                                </li>
+                                <li>
+                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                    取消收藏
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="table-list-box">
                         <table id="table-box">
                             <thead>
-                            <tr>
-                                <th style="width: 100px"></th>
-                                <th>待办事项<img src="./static/img/dealt/筛选.png"/></th>
-                                <th>经办人</th>
-                                <th>来源系统<img src="./static/img/dealt/筛选.png"/></th>
-                                <th>时间</th>
-                            </tr>
+                                <tr>
+                                    <th style="width: 100px"></th>
+                                    <th>
+                                        <span id="matter-btn">待办事项<img src="./static/img/dealt/筛选.png"/></span>
+                                        <!--待办事项提示框-->
+                                        <div class="tooltip-box sign-tooltip" id="matter-tip-box" style="top: 35px;">
+                                            <ul>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    全部待办
+                                                </li>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    收藏待办
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </th>
+                                    <th>经办人</th>
+                                    <th>
+                                        <span id="source-btn">来源系统<img src="./static/img/dealt/筛选.png"/></span>
+                                        <!--来源系统提示框-->
+                                        <div class="tooltip-box sign-tooltip" id="source-tip-box" style="top: 35px;">
+                                            <ul>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    OA系统
+                                                </li>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    HR系统
+                                                </li>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    主数据系统
+                                                </li>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    资产系统
+                                                </li>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    财务系统
+                                                </li>
+                                                <li>
+                                                    <img class="no-select" src="./static/img/dealt/弹窗-灰色圆圈标记.png" alt="灰色圆圈标记">
+                                                    <img class="select" src="./static/img/dealt/弹窗-标记.png" alt="灰色圆圈标记">
+                                                    其他系统
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </th>
+                                    <th>时间</th>
+                                </tr>
                             </thead>
                             <tbody>
                             <tr>

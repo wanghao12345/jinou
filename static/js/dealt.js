@@ -35,7 +35,8 @@ $(function () {
     /**
      * 删除
      */
-    $('#delete-btn').on('click', function () {
+    $('#delete-btn').on('click', function (e) {
+        e.stopPropagation();
         $('#delete-tip-box').css('display', 'block')
     })
     // 确定删除
@@ -46,6 +47,49 @@ $(function () {
     $('#delete-tip-box').on('click', 'button.just-no', function () {
         $('#delete-tip-box').css('display', 'none')
     })
+    /**
+     * 标记
+     */
+    $('#sign-btn').on('click', function (e) {
+        e.stopPropagation();
+        $('#sign-tip-box').css('display', 'block')
+    })
+    // 确定
+    $('#sign-tip-box').on('click', 'ul li', function () {
+        $('#sign-tip-box').css('display', 'none')
+    })
+
+    /**
+     * 待办事项
+     */
+    $('#matter-btn').on('click', function (e) {
+        e.stopPropagation();
+        $('#matter-tip-box').css('display', 'block')
+    })
+    // 确定
+    $('#matter-tip-box').on('click', 'ul li', function () {
+        $('#matter-tip-box').css('display', 'none')
+    })
+
+    /**
+     * 来源系统
+     */
+    $('#source-btn').on('click', function (e) {
+        e.stopPropagation();
+        $('#source-tip-box').css('display', 'block')
+    })
+    // 确定
+    $('#source-tip-box').on('click', 'ul li', function () {
+        $('#source-tip-box').css('display', 'none')
+    })
+
+    /**
+     *  清除所有弹窗
+     */
+    $('body').click(function () {
+        $('.tooltip-box').css('display', 'none')
+    });
+
 
     /**
      * 复选框选中
