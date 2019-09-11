@@ -217,6 +217,7 @@ h2{
 }
 .table-list-box thead tr th span{
     cursor: pointer;
+    font-weight: bold;
 }
 .table-list-box thead tr th img{
     margin-left: 5px;
