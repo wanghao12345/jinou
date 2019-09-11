@@ -33,6 +33,24 @@ $(function () {
     create_circle(7,0.8)
     create_circle(8,0.8)
 
+    /**
+     * 复选框选中
+     */
+    $('table#table-box').on('click', 'button.select', function () {
+        var tr = $(this).parent('td').parent('tr')
+        var type = tr.find('button.laiyuan').data('type')
+        if (tr.hasClass('select-tr')) {
+            tr.removeClass('select-tr')
+            $(this).html('<img src="./static/img/dealt/框.png" alt="框">')
+            tr.find('button.laiyuan').removeClass(type)
+        } else {
+            tr.addClass('select-tr')
+            $(this).html('<img src="./static/img/dealt/选中框.png" alt="选中框">')
+            tr.find('button.laiyuan').addClass(type)
+        }
+        console.log('23')
+    })
+
 
 
 

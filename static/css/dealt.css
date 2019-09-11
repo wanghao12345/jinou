@@ -111,5 +111,165 @@ h2{
     color:#FF934F;
     font-weight: bold;
 }
+.table-box{
+    margin-top: 20px;
+}
+.table-top-box{
+    overflow: hidden;
+}
+.table-top-box h2{
+    display: inline-block;
+    margin-right: 20px;
+    float: left;
+}
+.table-top-box .tab-box{
+    width: 90px;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    margin-top: 20px;
+}
+.table-top-box .tab-box button{
+    width:45px;
+    height:24px;
+    font-size:12px;
+    font-family:Helvetica;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.table-top-box .tab-box button.willDo{
+    color: #FFFFFF;
+    border-radius:4px 0px 0px 4px;
+    background:linear-gradient(63deg,#F04F37 0%,#FBA47F 100%);
+    float: left;
+}
+.table-top-box .tab-box button.hasDo{
+    color: #A9A9A9;
+    background:#FFFFFF;
+    border-radius:0px 4px 4px 0px;
+    float: left;
+}
+.table-content-box{
+    background: #FFFFFF;
+    box-shadow:0px 2px 6px 0px #d3d3d3;
+    border-radius:6px;
+    box-sizing: border-box;
+    padding: 10px 35px;
+}
+.table-select-box{
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+.select-left-box{
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+.select-left-box span{
+    float: left;
+    font-size:12px;
+    font-family:Helvetica;
+    color:#4E4E4E;
+}
+.select-left-box img{
+    float: left;
+    width: 15px;
+    margin-left: 3px;
+}
+.select-right-box{
+    float: right;
+    overflow: hidden;
+    cursor: pointer;
+}
+.select-right-box img{
+    float: right;
+    width: 10px;
+    margin-right: 3px;
+    margin-top: 1px;
+}
+.select-right-box span{
+    float: right;
+    font-size:12px;
+    font-family:Helvetica;
+    color:#4E4E4E;
+}
+.table-list-box{
+
+}
+.table-list-box table{
+    width: 100%;
+}
+.table-list-box thead tr th{
+    height:40px;
+    background:#f1f1f1;
+    font-size:14px;
+    font-family:Helvetica;
+    color: #4E4E4E;
+    line-height: 40px;
+    font-weight: bold;
+}
+.table-list-box thead tr th img{
+    margin-left: 5px;
+}
+.table-list-box tbody tr td{
+    height:50px;
+    line-height: 50px;
+    font-size:14px;
+    font-family:Helvetica;
+    color:#3E3E3E;
+    border-bottom: 1px solid #ececec;
+}
+.table-list-box tbody tr.select-tr td{
+    background-color: #f1f1f1;
+}
+.table-list-box tbody tr td button{
+    width: 14px;
+    height: 14px;
+    border: 0;
+    background-color: white;
+    margin-left: 10px;
+}
+.table-list-box tbody tr.select-tr td button{
+    background-color: #f1f1f1;
+}
+.table-list-box tbody tr td.time{
+    font-size:13px;
+    font-family:Helvetica;
+    color:#898989;
+}
+.table-list-box tbody tr td button.laiyuan{
+    width: 85px;
+    height: 20px;
+    border-radius:10px;
+    font-size:11px;
+    font-family:Helvetica;
+    line-height: 18px;
+}
+.table-list-box tbody tr td button.yellow{
+    color:#FF7137;
+    background:rgba(255,113,55,0.2);
+}
+.table-list-box tbody tr td button.yellow-active{
+    color: #ffffff;
+    background: #FF7137;
+}
+.table-list-box tbody tr td button.blue{
+    color: #47B1F1;
+    background:rgba(71,177,241,0.2);
+}
+.table-list-box tbody tr td button.blue-active{
+    color: #ffffff;
+    background:#47B1F1;
+}
+.table-list-box tbody tr td button.green{
+    color: #70C280;
+    background:rgba(112,194,128,0.2);
+}
+.table-list-box tbody tr td button.green-active{
+    color: #FFFFFF;
+    background:#70C280;
+}
 
 
