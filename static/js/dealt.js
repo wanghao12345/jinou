@@ -21,14 +21,6 @@ $(function () {
         $('ul#banner-list-box').css('margin-left', marginLeft + 'px')
     })
     /**
-     * 待办已办tab
-     */
-    $('.tab-box').on('click', 'button.tab-btn', function () {
-        $('.tab-box button').removeClass('active')
-        $(this).addClass('active')
-    })
-
-    /**
      * 圆形滚动条
      */
     create_circle(1,0.8)
@@ -39,6 +31,21 @@ $(function () {
     create_circle(6,0.8)
     create_circle(7,0.8)
     create_circle(8,0.8)
+
+    /**
+     * 删除
+     */
+    $('#delete-btn').on('click', function () {
+        $('#delete-tip-box').css('display', 'block')
+    })
+    // 确定删除
+    $('#delete-tip-box').on('click', 'button.just-yes', function () {
+        $('#delete-tip-box').css('display', 'none')
+    })
+    // 取消删除
+    $('#delete-tip-box').on('click', 'button.just-no', function () {
+        $('#delete-tip-box').css('display', 'none')
+    })
 
     /**
      * 复选框选中
