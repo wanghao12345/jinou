@@ -137,25 +137,26 @@ h2{
     border: 0;
     margin: 0;
     padding: 0;
-}
-.table-top-box .tab-box button.willDo{
-    color: #FFFFFF;
-    border-radius:4px 0px 0px 4px;
-    background:linear-gradient(63deg,#F04F37 0%,#FBA47F 100%);
-    float: left;
-}
-.table-top-box .tab-box button.hasDo{
     color: #A9A9A9;
     background:#FFFFFF;
     border-radius:0px 4px 4px 0px;
     float: left;
+}
+
+.table-top-box .tab-box button.willDo{
+    float: left;
+    border-radius:4px 0px 0px 4px;
+}
+.table-top-box .tab-box button.active{
+    color: #FFFFFF;
+    background:linear-gradient(63deg,#F04F37 0%,#FBA47F 100%);
 }
 .table-content-box{
     background: #FFFFFF;
     box-shadow:0px 2px 6px 0px #d3d3d3;
     border-radius:6px;
     box-sizing: border-box;
-    padding: 10px 35px;
+    padding: 20px 35px;
 }
 .table-select-box{
     width: 100%;
@@ -271,5 +272,84 @@ h2{
     color: #FFFFFF;
     background:#70C280;
 }
+/*分页*/
+#page {
+    margin: 20px auto;
+    color: #666;
+    display: block;
+    text-align: right;
+}
 
+#page li {
+    display: inline-block;
+    min-width: 30px;
+    height: 28px;
+    cursor: pointer;
+    color: #666;
+    font-size: 13px;
+    line-height: 28px;
+    background-color: #EFEFEF;
+    border: 0;
+    text-align: center;
+    margin: 0 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.xl-nextPage,
+.xl-prevPage {
+    width: 60px;
+    color: #0073A9;
+    height: 28px;
+}
+
+#page li.xl-disabled {
+    opacity: .5;
+    cursor: no-drop;
+}
+
+#page li.xl-disabled:hover{
+    background-color: #f9f9f9 !important;
+    border: 1px solid #dce0e0 !important;
+    color: #666 !important;
+}
+
+#page li.xl-active {
+    background-color: #FF934F;
+    color: #FFF
+}
+
+#page li:hover{
+    background-color: #FF934F !important;
+    color: #FFF
+}
+
+#page li.xl-jumpText {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    opacity: 1;
+    display: none;
+}
+
+#page li.xl-jumpText:hover{
+    background-color: rgba(0,0,0,0) !important;
+    border-color: rgba(0,0,0,0) !important;
+}
+
+#page li.xl-jumpButton{
+    padding: 0 5px;
+}
+
+#xlJumpNum {
+    width: 35px;
+    margin: 0 3px;
+    display: none;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+}
+input[type="number"]{
+    -moz-appearance:textfield;
+}
 

@@ -20,6 +20,13 @@ $(function () {
         }
         $('ul#banner-list-box').css('margin-left', marginLeft + 'px')
     })
+    /**
+     * 待办已办tab
+     */
+    $('.tab-box').on('click', 'button.tab-btn', function () {
+        $('.tab-box button').removeClass('active')
+        $(this).addClass('active')
+    })
 
     /**
      * 圆形滚动条
@@ -51,6 +58,20 @@ $(function () {
         console.log('23')
     })
 
+    /**
+     * 分页
+     */
+    // xlPaging.js 使用方法
+    $("#page").paging({
+        nowPage: 1, // 当前页码
+        pageNum: 30, // 总页码
+        buttonNum: 6, //要展示的页码数量
+        canJump: 1,// 是否能跳转。0=不显示（默认），1=显示
+        showOne: 0,//只有一页时，是否显示。0=不显示,1=显示（默认）
+        callback: function (num) { //回调函数
+            console.log(num);
+        }
+    });
 
 
 
