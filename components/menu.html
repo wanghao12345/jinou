@@ -1,39 +1,56 @@
 <!--菜单列表-->
 <div class="menu-list-box">
-    <div class="menu-item-box active-menu-item-box">
-        <div class="icon-box">
-            <img src="./static/img/icon-home.png" alt="home" />
-        </div>
-        <div class="name-text">首页</div>
+    <div class="menu-item-box menu-item-1 active-menu-item-box">
+        <a href="./index.html?menu=1">
+            <div class="icon-box">
+                <img src="./static/img/icon-home.png" alt="home" />
+            </div>
+            <div class="name-text">首页</div>
+        </a>
     </div>
-    <div class="menu-item-box">
-        <div class="icon-box">
-            <img style="width: 30px;" src="./static/img/icon-待办.png" alt="待办" />
-        </div>
-        <div class="name-text">待办</div>
+    <div class="menu-item-box menu-item-2">
+        <a href="./dealt.html?menu=2">
+            <div class="icon-box">
+                <img style="width: 30px;" src="./static/img/icon-待办.png" alt="待办" />
+            </div>
+            <div class="name-text">待办</div>
+        </a>
     </div>
-    <div class="menu-item-box">
-        <div class="icon-box">
-            <img style="width: 30px;" src="./static/img/icon-金隅报.png" alt="金隅报" />
-        </div>
-        <div class="name-text">金隅报</div>
+    <div class="menu-item-box menu-item-3">
+        <a href="./index.html?menu=3">
+            <div class="icon-box">
+                <img style="width: 30px;" src="./static/img/icon-金隅报.png" alt="金隅报" />
+            </div>
+            <div class="name-text">金隅报</div>
+        </a>
     </div>
-    <div class="menu-item-box">
-        <div class="icon-box">
-            <img style="width: 30px;" src="./static/img/icon-更多.png" alt="更多" />
-        </div>
-        <div class="name-text">更多</div>
+    <div class="menu-item-box menu-item-4">
+        <a href="./index.html?menu=4">
+            <div class="icon-box">
+                <img style="width: 30px;" src="./static/img/icon-更多.png" alt="更多" />
+            </div>
+            <div class="name-text">更多</div>
+        </a>
     </div>
 </div>
 
 <script>
-    /**
-     * 菜单切换
-     */
-    $('.menu-item-box').on('click', function () {
-        $('.menu-item-box').removeClass('active-menu-item-box')
-        $(this).addClass('active-menu-item-box')
-    });
+    $(function () {
+        var menuIndex = getUrlParam('menu')
+        if (menuIndex) {
+            $('.menu-item-box').removeClass('active-menu-item-box')
+            $('.menu-item-' + menuIndex).addClass('active-menu-item-box')
+        } else {
+            $('.menu-item-box').removeClass('active-menu-item-box')
+            $('.menu-item-1').addClass('active-menu-item-box')
+        }
+    })
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return decodeURI(r[2]); return null; //返回参数值
+    }
 </script>
 
 
