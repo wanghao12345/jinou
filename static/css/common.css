@@ -199,3 +199,16 @@
     box-sizing: border-box;
     padding: 18px;
 }
+
+/*适配老产品*/
+#ezpagecontent{
+    height: 1310px !important;
+    background: #f4f4f4!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+#content-wrapper{
+    padding-left: 0;
+    padding-top: 80px;
+    padding-right: 0;
+}
