@@ -22,26 +22,43 @@
             </a>
         </li>
         <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+            <a id="dropdown-btn" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                aria-expanded="false">
                 <img class="person-icon" src="./static/img/person-icon.png" alt="人力资源" />
                 <span class="person-name">王大明</span>
                 <span class="caret"></span>
             </a>
-            <ul class="dropdown-menu top-dropdown-menu-box dropdown-after-red">
-                <li class="active" data-index="1">
-                    <img class="person-icon" src="./static/img/icon-个人信息.png" alt="个人信息" />
-                    <span>个人信息</span>
-                </li>
-                <li data-index="2">
-                    <img class="person-icon" src="./static/img/icon-退出登录.png" alt="退出登录" />
-                    <span>退出登录</span>
-                </li>
-            </ul>
         </li>
     </ul>
 </div>
-
+<ul class="dropdown-menu top-dropdown-menu-box dropdown-after-red" style="right: 50px !important;left: auto;top: 68px !important;">
+    <li class="active" data-index="1">
+        <img class="person-icon" src="./static/img/icon-个人信息.png" alt="个人信息" />
+        <span>个人信息</span>
+    </li>
+    <li data-index="2">
+        <img class="person-icon" src="./static/img/icon-退出登录.png" alt="退出登录" />
+        <span>退出登录</span>
+    </li>
+</ul>
 <script>
+    $(function () {
+        /**
+         * 打开或关闭下拉选项
+         */
+        $('#dropdown-btn').on('click', function () {
+            if ($('ul.dropdown-menu').css('display') === 'none') {
+                $('ul.dropdown-menu').css('display', 'block')
+            } else {
+                $('ul.dropdown-menu').css('display', 'none')
+            }
+        })
+        /**
+         * 选择下拉选项
+         */
+        $('ul.dropdown-menu').on('click', 'li', function () {
+            $('ul.dropdown-menu').css('display', 'none')
+        })
+    })
 
 </script>
