@@ -89,7 +89,7 @@
     cursor: pointer;
     float: right;
     margin-right: 5px;
-    padding: 0;
+    padding: 0 !important;
 }
 .list-content-box ul li span.add-icon{
     width: 15px;
