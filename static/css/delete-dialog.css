@@ -76,7 +76,8 @@
     z-index: 99999;
 }
 .tooltip-box ul{
-    padding: 0;
+    padding: 0 !important;
+    margin: 0;
 }
 .tooltip-box ul li{
     width: 100%;
@@ -93,6 +94,16 @@
     margin-right: 5px;
 }
 .tooltip-box ul li img.select{
+    display: none;
+}
+.tooltip-box ul li.active{
+    background:linear-gradient(90deg,#F04F37 0%,#FBA47F 100%);
+    color: white;
+}
+.tooltip-box ul li.active img.select{
+    display: inline;
+}
+.tooltip-box ul li.active img.no-select{
     display: none;
 }
 .tooltip-box ul li:hover{

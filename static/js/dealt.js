@@ -23,15 +23,24 @@ $(function () {
     /**
      * 圆形滚动条
      */
-    create_circle(1,0.8)
-    create_circle(2,0.7)
-    create_circle(3,0.5)
-    create_circle(4,0.4)
-    create_circle(5,0.3)
-    create_circle(6,0.8)
-    create_circle(7,0.8)
-    create_circle(8,0.8)
+    create_circle(1, 0.8)
+    create_circle(2, 0.7)
+    create_circle(3, 0.5)
+    create_circle(4, 0.4)
+    create_circle(5, 0.3)
+    create_circle(6, 0.8)
+    create_circle(7, 0.8)
+    create_circle(8, 0.8)
 
+    /**
+     * tab
+     */
+    $('.tab-box .tab-btn').on('click', function () {
+        $('.tab-box .tab-btn').removeClass('active')
+        $(this).addClass('active')
+        var index = $(this).data('index')
+        getTableData(index)
+    })
     /**
      * 删除
      */
@@ -52,11 +61,20 @@ $(function () {
      */
     $('#sign-btn').on('click', function (e) {
         e.stopPropagation();
-        $('#sign-tip-box').css('display', 'block')
+        if ($('#sign-tip-box').css('display') === 'block') {
+            $('#sign-tip-box').css('display', 'none')
+        } else {
+            $('#sign-tip-box').css('display', 'block')
+        }
     })
     // 确定
-    $('#sign-tip-box').on('click', 'ul li', function () {
-        $('#sign-tip-box').css('display', 'none')
+    $('#sign-tip-box').on('click', 'ul li', function (e) {
+        e.stopPropagation();
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active')
+        } else {
+            $(this).addClass('active')
+        }
     })
 
     /**
@@ -64,11 +82,20 @@ $(function () {
      */
     $('#matter-btn').on('click', function (e) {
         e.stopPropagation();
-        $('#matter-tip-box').css('display', 'block')
+        if ($('#matter-tip-box').css('display') === 'block') {
+            $('#matter-tip-box').css('display', 'none')
+        } else {
+            $('#matter-tip-box').css('display', 'block')
+        }
     })
     // 确定
-    $('#matter-tip-box').on('click', 'ul li', function () {
-        $('#matter-tip-box').css('display', 'none')
+    $('#matter-tip-box').on('click', 'ul li', function (e) {
+        e.stopPropagation();
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active')
+        } else {
+            $(this).addClass('active')
+        }
     })
 
     /**
@@ -76,11 +103,20 @@ $(function () {
      */
     $('#source-btn').on('click', function (e) {
         e.stopPropagation();
-        $('#source-tip-box').css('display', 'block')
+        if ($('#source-tip-box').css('display') === 'block') {
+            $('#source-tip-box').css('display', 'none')
+        } else {
+            $('#source-tip-box').css('display', 'block')
+        }
     })
     // 确定
-    $('#source-tip-box').on('click', 'ul li', function () {
-        $('#source-tip-box').css('display', 'none')
+    $('#source-tip-box').on('click', 'ul li', function (e) {
+        e.stopPropagation();
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active')
+        } else {
+            $(this).addClass('active')
+        }
     })
 
     /**
@@ -125,8 +161,6 @@ $(function () {
     });
 
 
-
-
 })
 
 
@@ -135,18 +169,183 @@ $(function () {
  * @param num
  * @param val_num
  */
-function create_circle(num, val_num){
+function create_circle(num, val_num) {
     $('#circle_step' + num).circleProgress({
         value: val_num,
         size: 60,
-        startAngle:-1.57,
-        reverse:false,
-        lineCap:'round',
-        thickness:7,
+        startAngle: -1.57,
+        reverse: false,
+        lineCap: 'round',
+        thickness: 7,
         fill: {
-            gradient: ["#F04F37","#FBA47F"]
+            gradient: ["#F04F37", "#FBA47F"]
         }
-    }).on('circle-animation-progress', function(event, progress,stepValue) {
-        $(this).find('strong').html(String((stepValue*100).toFixed(2)) + '<i>%</i>');
+    }).on('circle-animation-progress', function (event, progress, stepValue) {
+        $(this).find('strong').html(String((stepValue * 100).toFixed(2)) + '<i>%</i>');
     });
+}
+
+/**
+ * 获取表格数据
+ */
+function getTableData(index) {
+    if (index == 1) {
+        $('table#table-box tbody').html('<tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <img src="./static/img/dealt/置顶选中.png" alt="置顶选中">\n' +
+            '                                        <img src="./static/img/dealt/星星.png" alt="星星">\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan yellow" data-type="yellow-active">OA办公系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <img src="./static/img/dealt/星星.png" alt="星星">\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan yellow" data-type="yellow-active">OA办公系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr class="select-tr">\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/选中框.png" alt="选中框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <img src="./static/img/dealt/星星.png" alt="星星">\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan yellow yellow-active" data-type="yellow-active">OA办公系统\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <img src="./static/img/dealt/星星.png" alt="星星">\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan blue" data-type="blue-active">主数据系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan green" data-type="green-active">HR系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>')
+    } else {
+        $('table#table-box tbody').html('<tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan green" data-type="green-active">HR系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan green" data-type="green-active">HR系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan green" data-type="green-active">HR系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan green" data-type="green-active">HR系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>\n' +
+            '                                <tr>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="select">\n' +
+            '                                            <img src="./static/img/dealt/框.png" alt="框">\n' +
+            '                                        </button>\n' +
+            '                                    </td>\n' +
+            '                                    <td>\n' +
+            '                                        <span>金隅集团年度人才流动报告及新进员工正式发布公文待审批</span>\n' +
+            '                                    </td>\n' +
+            '                                    <td>陈晓东</td>\n' +
+            '                                    <td>\n' +
+            '                                        <button class="laiyuan green" data-type="green-active">HR系统</button>\n' +
+            '                                    </td>\n' +
+            '                                    <td class="time">2019-9-11</td>\n' +
+            '                                </tr>')
+    }
 }
