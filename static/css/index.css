@@ -157,8 +157,8 @@
 }
 .jinou-article-list-box p{
     width: 100%;
-    height: 25px;
-    line-height: 25px;
+    height: 35px;
+    line-height: 35px;
     font-size: 14px;
     font-family: Helvetica;
     color: rgba(101,101,101,1);
@@ -523,7 +523,7 @@
     text-align: center;
     box-shadow: 0px 2px 3px 0px rgba(106,32,31,0.1);
     box-sizing: border-box;
-    padding: 16px 0;
+    padding: 20px 0;
     cursor: pointer;
 }
 .date-banner-box .date-banner-content-box ul li .week{
@@ -536,6 +536,7 @@
     font-family: Helvetica;
     color: #4E4E4E;
     font-weight: bold;
+    margin: 5px 0;
 }
 .date-banner-box .date-banner-content-box ul li .month{
     font-size:10px;
