@@ -1,0 +1,65 @@
+/*左边菜单导航*/
+.nav-bar-box{
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:linear-gradient(131deg,rgba(216,1,0,1) 0%,rgba(255,147,79,1) 100%);
+    box-shadow:0px 2px 6px 0px rgba(47,25,25,0.04);
+
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d90603, endColorstr=#fd8a4a);/*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#d90603, endColorstr=#fd8a4a)";/*IE8+*/
+}
+.logo-box{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 110px;
+    background-color: #d90b06;
+    position: relative;
+    display: inline-block;
+}
+.logo-box img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -28px;
+    margin-top: -16px;
+    width: 57px;
+    height: 33px;
+}
+.menu-list-box{
+    width: 100%;
+}
+.menu-item-box{
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin-left: -3px;
+    cursor: pointer;
+}
+.active-menu-item-box{
+    background: url(../img/侧边栏选中.png);
+    background-size: 107% 100%;
+    background-position: 5px 0;
+    box-sizing: border-box;
+    margin-left: -3px;
+}
+.menu-item-box .icon-box{
+    width: 100%;
+    text-align: center;
+}
+.menu-item-box img{
+    width: 30px;
+    height: 27px;
+}
+.menu-item-box .name-text{
+    font-size: 14px;
+    font-family: Helvetica;
+    color: #ffffff;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 4px;
+}

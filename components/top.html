@@ -31,13 +31,25 @@
         </li>
     </ul>
 </div>
-<ul class="dropdown-menu top-dropdown-menu-box dropdown-after-red" style="right: 50px !important;left: auto;top: 68px !important;">
-    <li class="active" data-index="1">
-        <img class="person-icon" src="./static/img/icon-个人信息.png" alt="个人信息" />
+<ul class="dropdown-menu top-dropdown-menu-box" style="right: 50px !important;left: auto;top: 68px !important;">
+    <li data-index="1">
+        <img class="select-img" src="./static/img/icon-个人信息.png" alt="个人信息" />
+        <img class="no-select" src="./static/img/icon-个人信息灰色.png" alt="个人信息" />
         <span>个人信息</span>
     </li>
     <li data-index="2">
-        <img class="person-icon" src="./static/img/icon-退出登录.png" alt="退出登录" />
+        <img class="select-img" src="./static/img/icon-进入后台.png" alt="个人信息" />
+        <img class="no-select" src="./static/img/icon-进入后台灰色.png" alt="个人信息" />
+        <span>进入后台</span>
+    </li>
+    <li data-index="3">
+        <img class="select-img" src="./static/img/icon-报纸.png" alt="个人信息" />
+        <img class="no-select" src="./static/img/icon-报纸灰色.png" alt="个人信息" />
+        <span>金隅报纸</span>
+    </li>
+    <li data-index="4">
+        <img class="select-img" src="./static/img/icon-退出登录.png" alt="退出登录" />
+        <img class="no-select" src="./static/img/icon-退出登录灰色.png" alt="退出登录" />
         <span>退出登录</span>
     </li>
 </ul>
@@ -59,6 +71,22 @@
         $('ul.dropdown-menu').on('click', 'li', function () {
             $('ul.dropdown-menu').css('display', 'none')
         })
+        /**
+         * 悬浮
+         */
+        $('ul.dropdown-menu li').mouseover(function () {
+            if ($(this).index() === 0) {
+                $('.top-dropdown-menu-box').addClass('dropdown-after-red')
+            } else {
+                $('.top-dropdown-menu-box').removeClass('dropdown-after-red')
+            }
+        })
+        $('ul.dropdown-menu').mouseout(function () {
+            $('.top-dropdown-menu-box').removeClass('dropdown-after-red')
+        })
+
+
+
     })
 
 </script>

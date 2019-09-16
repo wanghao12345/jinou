@@ -151,6 +151,15 @@ $(function () {
       '                        </li>')
   })
 
+  /**
+   * 日历列表文字轮播
+   */
+
+
+
+  window.setInterval(function () {
+    autoScroll("#date-list-inner-box")
+  }, 2000)
 
   /**
    * 选择年月
@@ -329,7 +338,7 @@ function changeMonthName(month) {
  * 改变日历记录内容
  */
 function changeDateListContent(year, month, day) {
-  $('#date-list-content-box').html(' <p class="first">\n' +
+  $('#date-list-inner-box').html(' <p class="first">\n' +
     '    <span class="left">研发部门会议</span>\n' +
     '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
     '</p>\n' +
@@ -342,7 +351,31 @@ function changeDateListContent(year, month, day) {
     '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
     '</p>\n' +
     '<p>\n' +
+    '    <span class="left">研发部门会议</span>\n' +
+    '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
+    '</p>\n' +
+    '<p>\n' +
     '    <span class="left">人力资源部门周会</span>\n' +
     '    <span class="right">30分钟后开始，星期一 '+day+'.'+month+'.'+year+'</span>\n' +
     '</p>')
+}
+
+/**
+ * 日历内容轮播
+ * @param obj
+ */
+function autoScroll(obj){
+  if ($(obj).find('p').length <= 4) {
+    return
+  }
+
+
+  $(obj).animate({
+    marginTop: '-30px'
+  },1000,function(){
+    $(this).css({marginTop : "0px"});
+    var p  =$(obj).children().first().clone()
+    $( obj+ " p:last").after(p);
+    $( obj+ " p:first").remove();
+  })
 }

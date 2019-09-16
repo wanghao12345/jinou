@@ -5,6 +5,9 @@
     z-index: 3 !important;
     height: 80px !important;
 }
+.wrapper-index-box{
+    height: 1250px !important;
+}
 /*底部主要内容*/
 .main-bottom-box{
     box-sizing: border-box;
@@ -541,16 +544,21 @@
 }
 .date-list-content-box{
     width: 100%;
-    height: 140px;
+    height: 139px;
     background-color: #fff;
     margin-top: 20px;
     box-sizing: border-box;
-    padding: 15px 30px 5px 40px;
+    padding: 10px 30px 10px 10px;
     position: relative;
-    overflow-y: auto;
+    overflow: hidden;
 }
 .date-list-content-box p{
     overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    box-sizing: border-box;
+    padding-left: 30px;
 }
 .date-list-content-box p span{
     font-size:14px;
@@ -568,7 +576,7 @@
     overflow: hidden;
     position: relative;
 }
-.date-list-content-box::before{
+.date-list-content-box p.first::before{
     content: '';
     position: absolute;
     display: block;
@@ -576,8 +584,8 @@
     height: 6px;
     border-radius: 5px;
     background-color: #D50000;
-    left: 27px;
-    top: 22px;
+    left: 17px;
+    top: 12px;
 }
 .date-list-content-box p.first span{
     font-size:14px;
@@ -682,6 +690,6 @@
 
 /*年月选择*/
 .layui-laydate{
-    top: 230px !important;
+    top: 800px !important;
 }
 
