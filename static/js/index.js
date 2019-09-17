@@ -154,12 +154,22 @@ $(function () {
   /**
    * 日历列表文字轮播
    */
-
-
-
-  window.setInterval(function () {
+  var timer = window.setInterval(function () {
     autoScroll("#date-list-inner-box")
   }, 2000)
+
+  $('#date-list-inner-box').mouseover(function () {
+    window.clearInterval(timer)
+  })
+  $('#date-list-inner-box').mouseout(function () {
+    timer = window.setInterval(function () {
+      autoScroll("#date-list-inner-box")
+    }, 2000)
+  })
+
+
+
+
 
   /**
    * 选择年月

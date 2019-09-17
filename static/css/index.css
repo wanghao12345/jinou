@@ -560,6 +560,7 @@
     margin: 0;
     box-sizing: border-box;
     padding-left: 30px;
+    cursor: pointer;
 }
 .date-list-content-box p span{
     font-size:14px;
