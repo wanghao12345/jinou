@@ -33,6 +33,7 @@
     font-family:Helvetica;
     color:rgba(62,62,62,1);
     float: left;
+    margin-top: 18px;
 }
 .dialog-header-box span{
     float: right;
@@ -84,12 +85,15 @@
     text-overflow:ellipsis;
     white-space: nowrap;
     text-align: left;
+    box-sizing: border-box;
+    padding-left: 2px;
 }
 .list-content-box ul li span.icon{
     cursor: pointer;
     float: right;
     margin-right: 5px;
     padding: 0 !important;
+    line-height: 50px;
 }
 .list-content-box ul li span.add-icon{
     width: 15px;
