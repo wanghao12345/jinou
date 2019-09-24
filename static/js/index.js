@@ -160,8 +160,10 @@ $(function () {
 
   $('#date-list-inner-box').mouseover(function () {
     window.clearInterval(timer)
+    $('#date-list-content-box').css('overflow', 'auto')
   })
   $('#date-list-inner-box').mouseout(function () {
+    $('#date-list-content-box').css('overflow', 'hidden')
     timer = window.setInterval(function () {
       autoScroll("#date-list-inner-box")
     }, 2000)
