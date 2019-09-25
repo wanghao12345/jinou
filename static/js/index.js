@@ -6,12 +6,22 @@ $(function () {
   /**
    * 查看系统更多
    */
-  $('#search-more-sys-btn').on('click', function () {
+  $('#search-more-sys-prev-btn').on('click', function () {
     var navSys = $('#nav-sys-list-box')
     var wid = parseInt(navSys.css('width').split('p')[0])
     var marginLeft = parseInt(navSys.css('margin-left').split('p')[0]) - 1200
 
     if ((marginLeft *(-1)) >= wid) {
+      marginLeft = 1200 - wid
+    }
+    $('#nav-sys-list-box').css('margin-left', marginLeft + 'px')
+  });
+  $('#search-more-sys-next-btn').on('click', function () {
+    var navSys = $('#nav-sys-list-box')
+    var wid = parseInt(navSys.css('width').split('p')[0])
+    var marginLeft = parseInt(navSys.css('margin-left').split('p')[0]) + 1200
+
+    if ( marginLeft >= 0 ) {
       marginLeft = 0
     }
     $('#nav-sys-list-box').css('margin-left', marginLeft + 'px')
