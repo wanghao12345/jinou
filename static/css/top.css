@@ -13,11 +13,25 @@
     line-height: 80px;
     font-size:20px;
     position: relative;
+    display: flex;
 }
 .main-top-left img.comp-name{
     position: absolute;
     left: 100px;
     top: 30px;
+}
+.main-top-left span.logo-title{
+    height: 80px;
+    line-height: 80px;
+    font-size: 20px;
+    margin-left: 10px;
+    font-family: Helvetica;
+    color: rgba(62,62,62,1);
+    letter-spacing: 1px;
+    background: linear-gradient(120deg, rgba(216,1,0,1) 0%, rgba(255,147,79,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
 .main-top-right{
     float: right;
