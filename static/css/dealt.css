@@ -232,6 +232,7 @@ h2{
 }
 .table-list-box tbody tr.select-tr td{
     background-color: #f1f1f1;
+    overflow: hidden;
 }
 .table-list-box tbody tr td button{
     width: 14px;
@@ -267,6 +268,10 @@ h2{
 .table-list-box tbody tr td button.blue{
     color: #47B1F1;
     background:rgba(71,177,241,0.2);
+}
+.table-list-box tbody tr td button.select{
+    float: left;
+    margin-bottom: 20px;
 }
 .table-list-box tbody tr td button.blue-active{
     color: #ffffff;
